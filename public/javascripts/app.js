@@ -7,6 +7,7 @@ memeApp.controller('TaskController', ['$scope', '$http', function($scope, $http)
 
     $scope.memeList = [];
     $scope.memeText = [];
+    //$scope.editMemeText = true;
 
     $http.get('/memes/fetch').then(function (response) {
         $scope.memeList = response.data;
@@ -21,6 +22,17 @@ memeApp.controller('TaskController', ['$scope', '$http', function($scope, $http)
         }
         console.log($scope.memeList);
     });
+
+    $scope.newFunction = function(image){
+        image.editMemeText = true;
+    };
+
+    $scope.myFunct = function(image, keyEvent) {
+        if (keyEvent.which === 13)
+            image.editMemeText = false;
+            console.log(image);
+
+    };
 
 
 

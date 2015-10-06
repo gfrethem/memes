@@ -5,5 +5,7 @@ block content
    #angular(ng-controller="TaskController")
       .images(ng-repeat="image in memeList")
          .containers
-            img.memeImages(src="{{image.image_url}}")
-            p.imageText {{image.text}}
+            img.memeImages(ng-src="{{image.image_url}}")
+            p.imageText(ng-hide="image.editMemeText" ng-click="newFunction(image)") {{image.text}}
+            p.imageText(ng-show="image.editMemeText")
+               textarea(rows="2" cols="34" ng-keypress="myFunct(image, $event)" ng-model="image.text" type="text")

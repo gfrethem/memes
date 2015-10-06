@@ -5,7 +5,7 @@ var textLinks = require('../public/data/phototext');
 
 
 router.get('/', function(request, response, next) {
-    response.render('memes', { title: 'Meme-O-Matic'})
+    response.render('memes', { title: 'Meme-O-Matic 5000'})
 });
 
 router.get('/fetch', function(request, response, next) {

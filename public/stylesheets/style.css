@@ -1,6 +1,9 @@
 body {
-  padding: 50px;
+  /*padding: 50px;*/
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+h1 {
+  margin-bottom: 0px;
 }
 
 a {
@@ -28,4 +31,10 @@ p{
   float: left;
   margin-bottom: 10px;
   width: 240px;
+  margin-top: 20px;
+  height: 210px;
+
+}
+input[type=text] {
+  width: 100%;
 }
