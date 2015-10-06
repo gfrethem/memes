@@ -1,0 +1,9 @@
+extends layout
+
+block content
+   h1= title
+   #angular(ng-controller="TaskController")
+      .images(ng-repeat="image in memeList")
+         .containers
+            img.memeImages(src="{{image.image_url}}")
+            p.imageText {{image.text}}
